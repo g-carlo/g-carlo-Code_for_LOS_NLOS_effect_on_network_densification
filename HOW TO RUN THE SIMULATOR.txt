@@ -1,0 +1,39 @@
+%%%%% Created by  :  Carlo Galiotto (galiotc@tcd.ie)
+%%%%% Last update :  March 2017
+
+This repository contains the Matlab code to test the stochatic-geometry based 
+model presented in the paper "Effect of LOS/NLOS Propagation on 5G Ultra-Dense
+Networks", submitted to "COMPUTER NETWORKS, Elsevier" and currently under review.
+
+This code has been tested for Matlab 2016a and 2015a.
+
+The repository includes several scripts/functions, which performs the following:
+
+- "sim_script_fully_loaded_network.m": This runs a simulation of the model for
+  fully loaded networks, and returns vectors of "SIR" values, "coverage" values
+  as the probability Prob[SIR > SIR_threshold], and the Area Spectral Efficiency
+  (ASE) values. This script can be run as a stand-alone .m file in Matlab.
+
+- "sim_script_fully_loaded_network_freq_reuse.m": This runs a simulation of the
+  model for fully loaded networks, for different frequency reuse factors for
+  frequency ALOHA medium access technique. It returns vectors of "SIR" values,
+  "coverage" values as the probability Prob[SIR > SIR_threshold], and the Area
+  Spectral Efficiency (ASE) values. This script can be run as a stand-alone .m
+  file in Matlab.
+
+- "sim_script_partially_loaded_network.m": This runs a simulation of the
+  model for partially loaded networks. It returns vectors of "SIR" values,
+  "coverage" values as the probability Prob[SIR > SIR_threshold], and the Area
+  Spectral Efficiency (ASE) values. This script can be run as a stand-alone .m
+  file in Matlab.
+
+- "launch_check_p_A_LOS_NLOS.m": This runs a simulation of the model for
+  partially loaded networks. It runs a benchmark of the analytical expression of
+  the probability of a base station being active (as a function of the user and
+  base station densities) against the simulation results. It calls the function
+  "fnc_check_p_Active_LOS_NLOS.m" and plot the simulated and analytical curves
+  of p_active as a function of the user desnity over the base station density.
+  This script can be run as a stand-alone .m file in Matlab.
+
+- "fnc_check_p_Active_LOS_NLOS.m": this function is called by
+  "launch_check_p_A_LOS_NLOS.m".
